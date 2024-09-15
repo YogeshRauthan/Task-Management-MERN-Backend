@@ -9,12 +9,14 @@ require("./database");
 const app = express();
 
 app.use(
-  cors({
-    origin: ["*"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
+  cors()
 );
+
+// {
+//   origin: ["*"],
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true,
+// }
 
 app.use(cookieParser());
 
