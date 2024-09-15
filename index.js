@@ -9,14 +9,12 @@ require("./database");
 const app = express();
 
 app.use(
-  cors()
+  cors({
+    origin: ["https://task-management-mern-frontend-gules.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
 );
-
-// {
-//   origin: ["*"],
-//   methods: ["GET", "POST", "PUT", "DELETE"],
-//   credentials: true,
-// }
 
 app.use(cookieParser());
 
