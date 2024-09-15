@@ -28,4 +28,8 @@ app.use("/api", (req, res) => {
   res.status(200).json({ message: "Hello express" });
 });
 
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "server running" });
+});
+
 app.listen(5000, () => console.log(`App is now running at port 5000`));
